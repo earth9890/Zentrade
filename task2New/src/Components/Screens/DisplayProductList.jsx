@@ -17,8 +17,8 @@ function DisplayProductList({ products, selectedFields }) {
           {sortedProducts.map((product, index) => (
             <ProductCard
               key={index}
-              product={filterFields(product, selectedFields)}
-              // selectedFields={selectedFields}
+              product={product}
+              selectedFields={selectedFields}
             />
           ))}
         </div>
