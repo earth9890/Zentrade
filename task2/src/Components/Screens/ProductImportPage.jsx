@@ -91,7 +91,8 @@ const ProductImportPage = () => {
             if (productValues.length > 0) {
               const firstProduct = productValues[0];
               const fields = Object.keys(firstProduct);
-
+              const f =  fields.filter(x => !selectedFields.includes(x)) 
+              setSelectedFields(f);
               setAvailableFields(fields);
             } else {
               console.error("Products object is empty.");
